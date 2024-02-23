@@ -20,9 +20,6 @@
             padding: 20px;
             background-color: #222;
             color: #fff;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
         }
 
         h1, h2 {
@@ -30,6 +27,8 @@
         }
 
         section {
+            display: flex;
+            align-items: center;
             padding: 20px;
             margin: 20px;
             background-color: #FFB729;
@@ -39,6 +38,18 @@
 
         section:hover {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
         }
 
         a {
@@ -51,22 +62,6 @@
             padding: 10px;
             background-color: #807154;
             color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        img {
-            max-width: 100%;
-            border-radius: 50%;
-            margin: 20px 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        img:hover {
-            transform: scale(1.1);
         }
     </style>
 </head>
@@ -78,7 +73,7 @@
     </header>
 
     <section id="descripcion">
-        <h2>Sobre mí</h2>
+        <img src="https://scontent.fbog10-1.fna.fbcdn.net/v/t39.30808-6/353052860_6409974085752905_8482969763841367194_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=BUdjx7XrqGAAX-lRsJh&_nc_ht=scontent.fbog10-1.fna&oh=00_AfBrAYyo5-BlxP-arySg-vxq2xbXtp3xXhiHvxmc6OhuqA&oe=65DD4457" alt="Foto de Zaroni Robles">
         <p>En las cálidas tierras de Barranquilla, Colombia, Zaroni forjó su camino académico en la prestigiosa Universidad del Atlántico, donde se sumergió en el vasto océano del conocimiento matemático...</p>
         <!-- Agrega más contenido sobre Zaroni aquí -->
     </section>
@@ -113,13 +108,8 @@
         <!-- Agrega más detalles de contacto aquí -->
     </section>
 
-    <section id="foto">
-        <h2>Foto de Perfil</h2>
-        <img src="https://scontent.fbog10-1.fna.fbcdn.net/v/t39.30808-6/353052860_6409974085752905_8482969763841367194_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=BUdjx7XrqGAAX-lRsJh&_nc_ht=scontent.fbog10-1.fna&oh=00_AfBrAYyo5-BlxP-arySg-vxq2xbXtp3xXhiHvxmc6OhuqA&oe=65DD4457" alt="Foto de Zaroni Robles">
-    </section>
-
     <footer>
-        <p>&copy; 2024 Zaroni Robles - Todos los derechos reservados</p>
+        <p>&copy; 2024 Zaroni Rob        p>&copy; 2024 Zaroni Robles - Todos los derechos reservados</p>
     </footer>
 
     <script>
@@ -157,4 +147,5 @@
 
 </body>
 </html>
+
 
