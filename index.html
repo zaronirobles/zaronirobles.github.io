@@ -1,3 +1,6 @@
+Para lograr lo que mencionas, puedes agregar algunas modificaciones en el código y utilizar CSS para lograr efectos visuales y transiciones. También, puedes usar JavaScript para detectar el desplazamiento y animar las secciones. Aquí tienes una versión mejorada del código:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,18 +23,21 @@
             padding: 20px;
             background-color: #222;
             color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
 
         h1, h2 {
-            color: #555;
+            color: #29C2FF;
         }
 
         section {
             padding: 20px;
             margin: 20px;
-            background-color: #fff;
+            background-color: #FFB729;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         section:hover {
@@ -39,18 +45,31 @@
         }
 
         a {
-            color: #007bff;
+            color: #547380;
             text-decoration: none;
         }
 
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #222;
+            background-color: #807154;
             color: #fff;
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1000;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -97,9 +116,6 @@
         <!-- Agrega más detalles de contacto aquí -->
     </section>
 
-    <footer>
-        <p>&copy; 2024 Zaroni Robles - Todos los derechos reservados</p>
-    </footer>
-
-</body>
-</html>
+    <section id="foto">
+        <h2>Foto de Perfil</h2>
+        <img src="https://scontent.fbog10-1.fna.fbcdn.net/v/t39.30808-6/353052860_6409974085752905_848296976384136
