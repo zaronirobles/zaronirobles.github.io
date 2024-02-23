@@ -1,6 +1,3 @@
-Para lograr lo que mencionas, puedes agregar algunas modificaciones en el código y utilizar CSS para lograr efectos visuales y transiciones. También, puedes usar JavaScript para detectar el desplazamiento y animar las secciones. Aquí tienes una versión mejorada del código:
-
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -118,4 +115,46 @@ Para lograr lo que mencionas, puedes agregar algunas modificaciones en el códig
 
     <section id="foto">
         <h2>Foto de Perfil</h2>
-        <img src="https://scontent.fbog10-1.fna.fbcdn.net/v/t39.30808-6/353052860_6409974085752905_848296976384136
+        <img src="https://scontent.fbog10-1.fna.fbcdn.net/v/t39.30808-6/353052860_6409974085752905_8482969763841367194_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=BUdjx7XrqGAAX-lRsJh&_nc_ht=scontent.fbog10-1.fna&oh=00_AfBrAYyo5-BlxP-arySg-vxq2xbXtp3xXhiHvxmc6OhuqA&oe=65DD4457" alt="Foto de Zaroni Robles">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zaroni Robles - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                var bounding = section.getBoundingClientRect();
+                if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                    section.style.backgroundColor = getColor(section.id);
+                } else {
+                    section.style.backgroundColor = '#FFB729'; // Fallback color
+                }
+            });
+        });
+
+        function getColor(sectionId) {
+            switch (sectionId) {
+                case 'descripcion':
+                    return '#FFB729';
+                case 'logros':
+                    return '#FF7429';
+                case 'habilidades':
+                    return '#29C2FF';
+                case 'docencia':
+                    return '#547380';
+                case 'programacion':
+                    return '#807154';
+                case 'contacto':
+                    return '#807154'; // Use the same color as 'programacion'
+                default:
+                    return '#FFB729'; // Fallback color
+            }
+        }
+    </script>
+
+</body>
+</html>
+
