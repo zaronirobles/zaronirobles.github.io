@@ -27,6 +27,12 @@
             align-items: center;
             padding: 0 20px; /* Añadir relleno a los lados del encabezado */
         }
+        .highlighted-word {
+    background-color: #F2FF00; /* Amarillo limón para resaltar */
+    color: #000000; /* Color de texto negro */
+    font-weight: bold; /* Texto en negrita */
+}
+
 
         .brand-logo img {
             height: 45px; /* Ajustar el tamaño de la imagen al alto del encabezado */
@@ -106,6 +112,27 @@
             height: 100%;
             object-fit: cover; /* Escalar el GIF para cubrir completamente el contenedor */
         }
+        #gif2 {
+    margin-top: -50px; /* Reducir el margen superior para acercarlo a los contenedores anteriores */
+    margin-bottom: -300px; /* Eliminar margen inferior para reducir la separación con el footer */
+}
+
+#gif2 .gif-container {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    padding-top: 56.25%; /* Proporción de aspecto para videos 16:9 */
+    overflow: hidden;
+}
+
+#gif2 .gif-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
 
         footer {
             background-color: #000000;
@@ -132,7 +159,7 @@
     #gif2 .gif-container {
         position: relative;
         width: 100%;
-        height: 0;
+        height: 30px;
         padding-top: 56.25%; /* Proporción de aspecto para videos 16:9 */
         overflow: hidden;
     }
@@ -142,7 +169,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 50%;
         object-fit: cover;
     }
     </style>
@@ -165,10 +192,13 @@
             </li>
             <li><a href="#programacion">Programación</a></li>
             <li><a href="#emprendimientos">Emprendimientos</a></li>
-            <li><a href="#contactame">Contáctame</a></li>
+            <li><a href="#contactame" style="margin-right: 20px;">Contáctame</a></li> <!-- Ajuste del margen derecho -->
         </ul>
     </nav>
 </header>
+
+
+
 
 <main>
 
@@ -178,9 +208,9 @@
             <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/Foto%20de%20perfil%202.png" alt="Foto de perfil">
         </div>
         <div class="column">
-            <h1>Zaroni Robles</h1>
-            <h2>Matemáticas, Tecnología y Creatividad</h2>
-        </div>
+        <h1 style="font-size: 36px;">Zaroni Robles</h1> <!-- Título con un tamaño de fuente más grande -->
+        <h2 style="font-size: 24px;">Matemáticas, Tecnología y Creatividad</h2> <!-- Subtítulo con un tamaño de fuente más pequeño -->
+    </div>
     </section>
 
     <section id="matematicas" class="container">
@@ -198,10 +228,15 @@
         <iframe width="80%" height="315" src="https://www.youtube.com/embed/Fg_V04WbCuI?autoplay=1" frameborder="0" allowfullscreen></iframe>
     </section>
 
-    <section id="gif2" class="container full-width">
+   <section id="gif2" class="container full-width">
     <!-- Contenedor 4 -->
-    <div class="gif-container">
-        <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/gif2.gif" alt="Gif 2">
+    <div class="combined-container">
+        <div class="text-container">
+            <p>En el mundo de las matemáticas, nos encontramos con conceptos que están en constante movimiento y cambio. Desde las funciones que describen el movimiento en el espacio hasta las ecuaciones que modelan sistemas dinámicos, las matemáticas están llenas de animación, capturando la esencia dinámica del universo.</p>
+        </div>
+        <div class="gif-container">
+            <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/gif2.gif" alt="Gif 2">
+        </div>
     </div>
 </section>
 
@@ -215,14 +250,16 @@
         <a href="https://www.youtube.com/@ZaroniRobles"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/youtube.png" alt="YouTube" width="851" height="315"></a>
     </div>
     <div class="contact-info">
-        <a href="https://zaronirobles.github.io">Inicio</a>
-        <a href="#">Política de Privacidad</a>
+        <span class="highlighted"><a href="https://zaronirobles.github.io">Inicio</a></span>
+        <a href="#" style="color: white;">Política de Privacidad</a>
         <span>📱3012890365</span>
         <span>📧zrobles.code@gmail.com</span>
+        <p>© 2024 Zaroni Robles - Todos los derechos reservados. <span class="highlighted">Diseño por Zaroni Robles</span></p>
     </div>
 </footer>
 
 
+
+
 </body>
 </html>
-
