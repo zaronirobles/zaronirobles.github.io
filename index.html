@@ -3,149 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travesía Matemática de Zaroni Robles</title>
+    <title>Zaroni Robles</title>
     <style>
         body {
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s ease;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0; /* Eliminar márgenes predeterminados del cuerpo */
+            padding: 0; /* Eliminar relleno predeterminado del cuerpo */
         }
 
         header {
-            text-align: center;
-            padding: 20px;
-            background-color: #222;
-            color: #fff;
-        }
-
-        h1, h2 {
-            color: #6b8dc0;
-        }
-
-        section {
+            background-color: #000000;
+            color: #FFFFFF;
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            margin: 20px;
-            background-color: #6c9173;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+            padding: 0 20px; /* Añadir relleno a los lados del encabezado */
         }
 
-        section:hover {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        .brand-logo img {
+            height: 45px; /* Ajustar el tamaño de la imagen al alto del encabezado */
         }
 
-        img {
-            max-width: 100%;
-            border-radius: 50%;
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
             margin-right: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
         }
 
-        img:hover {
-            transform: scale(1.1);
-        }
-
-        a {
-            color: #547380;
+        nav ul li a {
+            color: #FFFFFF;
             text-decoration: none;
         }
 
-        footer {
-            text-align: center;
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #000000;
             padding: 10px;
-            background-color: #807154;
-            color: #fff;
         }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+            margin-top: 10px;
+        }
+
+        main {
+            margin-top: 70px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px 0;
+            display: flex; /* Utilizar flexbox para centrar verticalmente el contenido */
+            align-items: center; /* Centrar verticalmente el contenido */
+            justify-content: center; /* Centrar horizontalmente el contenido */
+            position: relative; /* Agregar posición relativa para permitir superposiciones */
+            overflow: hidden; /* Ocultar contenido adicional del contenedor */
+        }
+
+        .column {
+            width: 40%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .column img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gif-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Colocar detrás del contenido principal */
+            overflow: hidden; /* Ocultar el exceso de GIF */
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Escalar el GIF para cubrir completamente el contenedor */
+        }
+
+        footer {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+        }
+
+        .contact-info span {
+            margin: 0 10px;
+        }
+        full-width {
+    width: 100%;
+}
+
+    #gif2 .gif-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%; /* Proporción de aspecto para videos 16:9 */
+        overflow: hidden;
+    }
+
+    #gif2 .gif-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>¡Bienvenidos a la fascinante travesía matemática de Zaroni Robles!</h1>
-        <p>Un apasionado matemático y educador con raíces costeñas! 🚀🌌</p>
-    </header>
+<header>
+    <div class="brand-logo">
+        <a href="https://zaronirobles.github.io"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/Firma%20marca%20blanca.png" alt="Marca Firma"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#matematicas">Matemáticas</a>
+                <ul>
+                    <li><a href="#matematicas-puras">Matemáticas Puras</a></li>
+                    <li><a href="#matematicas-aplicadas">Matemáticas Aplicadas</a></li>
+                    <li><a href="#docencia-divulgacion">Docencia y Divulgación</a></li>
+                </ul>
+            </li>
+            <li><a href="#programacion">Programación</a></li>
+            <li><a href="#emprendimientos">Emprendimientos</a></li>
+            <li><a href="#contactame">Contáctame</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section id="descripcion">
-        <img src="https://youtu.be/Fg_V04WbCuI?si=3EpNWtEN4Akww5ui" alt="Foto de Zaroni Robles">
-        <p>En las cálidas tierras de Barranquilla, Colombia, Zaroni forjó su camino académico en la prestigiosa Universidad del Atlántico, donde se sumergió en el vasto océano del conocimiento matemático...</p>
-        <!-- Agrega más contenido sobre Zaroni aquí -->
+<main>
+
+    <section id="sobre-mi" class="container">
+        <!-- Contenedor 1 -->
+        <div class="column">
+            <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/Foto%20de%20perfil%202.png" alt="Foto de perfil">
+        </div>
+        <div class="column">
+            <h1>Zaroni Robles</h1>
+            <h2>Matemáticas, Tecnología y Creatividad</h2>
+        </div>
     </section>
 
-    <section id="logros">
-        <h2>Logros Académicos</h2>
-        <p>En el reino de las matemáticas puras, Zaroni ha dejado su huella a través de investigaciones notables. Un hito destacado es su artículo "ON A GENERALIZATION OF STRONGLY η -CONVEX FUNCTIONS VIA FRACTAL SETS," publicado en FractalsVol. 29, No. 07, 2150203 (2021). Este emocionante viaje matemático puede explorarse más a fondo en el siguiente enlace: <a href="https://www.worldscientific.com/doi/10.1142/S0218348X21502030">World Scientific</a>...</p>
-        <!-- Agrega más logros académicos aquí -->
+    <section id="matematicas" class="container">
+        <div class="text-container">
+        <p>¡Qué más mi llave, bienvenidos a mi rinconcito en la web! En este espacio nos sumergimos de lleno en el fascinante universo de las matemáticas. Pero ¡ojo!, no esperes aburridas sesiones de sumas y restas interminables. Aquí, exploraremos cómo estas disciplinas, a menudo consideradas un desafío, pueden ser nuestras mejores aliadas para comprender la vida en su totalidad.</p>
+        <p>Las matemáticas son como esa brisa fresca que te envuelve en la playa, refrescando tu mente y brindándote una perspectiva renovada. Nos invitan a pensar de forma creativa, a abordar problemas como intrigantes acertijos y a descubrir soluciones que desafían nuestra imaginación. Así que, prepárate para un emocionante viaje, donde juntos exploraremos la belleza y la emoción que se esconde detrás de cada fórmula y cada número.</p>
+    </div>
+        <div class="gif-container">
+            <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/gif%201.gif" alt="Gif 1">
+        </div>
     </section>
 
-    <section id="habilidades">
-        <h2>Habilidades y Educación</h2>
-        <p>En su búsqueda de conocimiento, Zaroni se embarcó en la maestría en matemáticas en la Universidad del Atlántico, elevando aún más sus habilidades y perspectivas. En el campo de las matemáticas aplicadas, ha adquirido una serie de habilidades en estadísticas y tecnologías emergentes, desde "Fundamentos de Machine Learning" hasta la administración de servidores...</p>
-        <!-- Agrega más detalles sobre las habilidades y educación de Zaroni aquí -->
+    <section id="video" class="container">
+        <!-- Contenedor 3 -->
+        <iframe width="80%" height="315" src="https://www.youtube.com/embed/Fg_V04WbCuI?autoplay=1" frameborder="0" allowfullscreen></iframe>
     </section>
 
-    <section id="docencia">
-        <h2>Docencia</h2>
-        <p>Como educador apasionado, Zaroni ha trascendido los métodos convencionales. Su empresa de refuerzo académico destaca por una metodología única de cinco pasos, revelando los secretos para obtener el dominio de los temas matemáticos. Su enfoque innovador detecta y corrige las "malas prácticas matemáticas", guiando a los estudiantes a escribir con claridad y comprensión...</p>
-        <!-- Agrega más detalles sobre la docencia de Zaroni aquí -->
-    </section>
+    <section id="gif2" class="container full-width">
+    <!-- Contenedor 4 -->
+    <div class="gif-container">
+        <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/gif2.gif" alt="Gif 2">
+    </div>
+</section>
 
-    <section id="programacion">
-        <h2>Programación y Hobbies</h2>
-        <p>Más allá de las ecuaciones y fórmulas, Zaroni se aventura en el mundo de la programación, explorando Java Script, HTML, CSS, Matlab, Latex y Python. A sus 26 años, este apasionado matemático encuentra equilibrio en la música, tocando con destreza la guitarra, el piano, la flauta dulce, la melódica y el violín...</p>
-        <!-- Agrega más detalles sobre la programación y hobbies de Zaroni aquí -->
-    </section>
+</main>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Para aquellos que deseen unirse a esta odisea matemática, el contacto de Zaroni es el siguiente: 📱3012890365, 📧zrobles.code@gmail.com. ¡Prepárate para un viaje emocionante donde las matemáticas se encuentran con la creatividad costeña y la rigurosidad académica! 🌟🎓</p>
-        <!-- Agrega más detalles de contacto aquí -->
-    </section>
+<footer>
+    <div class="social-media">
+        <a href="https://www.facebook.com/zaroni.roblescohen"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/facebook.png" alt="Facebook" width="851" height="315"></a>
+        <a href="https://github.com/zaronirobles"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/github.png" alt="GitHub" width="851" height="315"></a>
+        <a href="https://www.linkedin.com/in/zaroni-robles-cohen"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/linkedin.png" alt="LinkedIn" width="851" height="315"></a>
+        <a href="https://www.youtube.com/@ZaroniRobles"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/youtube.png" alt="YouTube" width="851" height="315"></a>
+    </div>
+    <div class="contact-info">
+        <a href="https://zaronirobles.github.io">Inicio</a>
+        <a href="#">Política de Privacidad</a>
+        <span>📱3012890365</span>
+        <span>📧zrobles.code@gmail.com</span>
+    </div>
+</footer>
 
-    <footer>
-        <p>&copy; 2024 Zaroni Robles - Todos los derechos reservados</p>
-    </footer>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var sections = document.querySelectorAll('section');
-            sections.forEach(function (section) {
-                var bounding = section.getBoundingClientRect();
-                if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-                    section.style.backgroundColor = getColor(section.id);
-                } else {
-                    section.style.backgroundColor = '#FFB729'; // Fallback color
-                }
-            });
-        });
-
-        function getColor(sectionId) {
-            switch (sectionId) {
-                case 'descripcion':
-                    return '#FFB729';
-                case 'logros':
-                    return '#FF7429';
-                case 'habilidades':
-                    return '#807154';
-                case 'docencia':
-                    return '#547380';
-                case 'programacion':
-                    return '#d3a285';
-                case 'contacto':
-                    return '#FF7429'; // Use the same color as 'programacion'
-                default:
-                    return '#FFB729'; // Fallback color
-            }
-        }
-    </script>
 
 </body>
 </html>
-
 
