@@ -82,7 +82,7 @@
         .container {
             width: 80%;
             margin: 0 auto;
-            text-align: center;
+            text-align: justify;
             padding: 50px 0;
             display: flex; /* Utilizar flexbox para centrar verticalmente el contenido */
             align-items: center; /* Centrar verticalmente el contenido */
@@ -118,26 +118,26 @@
             object-fit: cover; /* Escalar el GIF para cubrir completamente el contenedor */
         }
         #gif2 {
-    margin-top: -50px; /* Reducir el margen superior para acercarlo a los contenedores anteriores */
-    margin-bottom: -300px; /* Eliminar margen inferior para reducir la separación con el footer */
-}
+        margin-top: -50px; /* Reducir el margen superior para acercarlo a los contenedores anteriores */
+        margin-bottom: -300px; /* Eliminar margen inferior para reducir la separación con el footer */
+    }
 
-#gif2 .gif-container {
-    position: relative;
-    width: 100%;
-    height: 30px;
-    padding-top: 56.25%; /* Proporción de aspecto para videos 16:9 */
-    overflow: hidden;
-}
+        #gif2 .gif-container {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            padding-top: 56.25%; /* Proporción de aspecto para videos 16:9 */
+            overflow: hidden;
+        }
 
-#gif2 .gif-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-}
+        #gif2 .gif-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
 
         footer {
             background-color: #000000;
@@ -158,25 +158,71 @@
             margin: 0 10px;
         }
         full-width {
-    width: 100%;
+        width: 100%;
+    }
+
+        #gif2 .gif-container {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            padding-top: 56.25%; /* Proporción de aspecto para videos 16:9 */
+            overflow: hidden;
+        }
+
+        #gif2 .gif-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+    
+    
+          .wrapper {
+    display: flex;
+    flex-direction: row; /* Establecer dirección de los elementos a horizontal */
+    align-items: center; /* Alinear los elementos verticalmente en el centro */
 }
 
-    #gif2 .gif-container {
-        position: relative;
-        width: 100%;
-        height: 30px;
-        padding-top: 56.25%; /* Proporción de aspecto para videos 16:9 */
-        overflow: hidden;
-    }
+.left-column,
+.right-column {
+    width: 50%;
+}
 
-    #gif2 .gif-container img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        object-fit: cover;
-    }
+.image-container {
+    width: 300px; /* Tamaño fijo para el contenedor de la imagen */
+    height: 500px; /* Altura fija para el contenedor de la imagen */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+    display: flex; /* Utilizar flexbox para centrar verticalmente */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    text-align: center; /* Centrar la imagen horizontalmente */
+}
+
+.image-slider {
+    width: 100%; /* Ajustar el ancho de la pasarela de imágenes */
+    white-space: nowrap; /* Evitar que las imágenes se envuelvan en varias líneas */
+    display: flex; /* Mostrar las imágenes en línea */
+}
+
+.image-slider img {
+    width: 200px; /* Ancho fijo para cada imagen */
+    height: 200px; /* Altura fija para cada imagen */
+    object-fit: cover; /* Recortar la imagen si no cabe */
+    opacity: 1; /* Opacidad inicial */
+    transition: opacity 1s ease-in-out; /* Transición suave de la opacidad */
+}
+
+h2 {
+    font-size: 24px; /* Tamaño de fuente del título */
+    margin-top: 0; /* Eliminar el margen superior predeterminado */
+    margin-bottom: 10px; /* Añadir un espacio entre el título y el resto del texto */
+}
+
+
+    
+    
     </style>
 </head>
 <body>
@@ -187,6 +233,7 @@
     </div>
     <nav>
         <ul>
+            <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#matematicas">Matemáticas</a>
                 <ul>
@@ -207,18 +254,19 @@
 
 <main>
 
-    <section id="sobre-mi" class="container">
-        <!-- Contenedor 1 -->
-        <div class="column">
-            <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/Foto%20de%20perfil%202.png" alt="Foto de perfil">
-        </div>
-        <div class="column">
-        <h1 style="font-size: 36px;">El Palenque de Zaroni Robles</h1> <!-- Título con un tamaño de fuente más grande -->
-        <h2 style="font-size: 24px;">Liberando el Potencial Matemático, Tecnológico y Empresarial</h2> <!-- Subtítulo con un tamaño de fuente más pequeño -->
+    <section id="inicio" class="container" style="text-align: center;">
+    <!-- Contenedor 1 -->
+    <div class="column">
+        <img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/Foto%20de%20perfil%202.png" alt="Foto de perfil">
     </div>
-    </section>
+    <div class="column">
+        <h1 style="font-size: 36px;">El Palenque de Zaroni Robles</h1>
+        <h2 style="font-size: 24px;">Liberando el Potencial Matemático, Tecnológico y Empresarial</h2>
+    </div>
+</section>
 
-    <section id="matematicas" class="container">
+
+    <section id="inicio" class="container text-align: center;">
         <div class="text-container">
         <p>¡Qué tal, mi gente, y bienvenidos a mi palenque virtual! En este espacio, nos adentramos en el fascinante universo de las matemáticas. Pero, ¡ojo!, aquí no hay lugar para aburridas sesiones de sumas y restas interminables. En nuestro palenque, exploraremos cómo estas disciplinas, a menudo consideradas un reto, pueden ser nuestras mejores aliadas para comprender la vida en su totalidad.</p>
         <p>Las matemáticas son como esa brisa fresca que te envuelve en la playa del conocimiento, refrescando tu mente y brindándote una perspectiva renovada. Nos invitan a pensar de forma creativa, a abordar problemas como intrigantes acertijos y a descubrir soluciones que desafían nuestra imaginación. Así que, prepárate para un emocionante viaje, donde juntos exploraremos la belleza y la emoción que se esconde detrás de cada fórmula y cada número.</p>
@@ -228,14 +276,15 @@
         </div>
     </section>
 
-    <section id="video" class="container">
-        <!-- Contenedor 3 -->
-        <iframe width="80%" height="315" src="https://www.youtube.com/embed/Fg_V04WbCuI?autoplay=1" frameborder="0" allowfullscreen></iframe>
-    </section>
+    <section id="inicio" class="container" style="text-align: center;">
+    <!-- Contenedor 3 -->
+    <iframe width="80%" height="315" src="https://www.youtube.com/embed/Fg_V04WbCuI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+</section>
 
-   <section id="gif2" class="container full-width">
+
+   <section id="inicio" class="container full-width">
     <!-- Contenedor 4 -->
-    <div class="combined-container">
+    <div class="combined-container" id="gif2">
         <div class="text-container">
             <p>En el mundo de las matemáticas, nos encontramos con conceptos que están en constante movimiento y cambio. Desde las funciones que describen el movimiento en el espacio hasta las ecuaciones que modelan sistemas dinámicos, las matemáticas están llenas de animación, capturando la esencia dinámica del universo.</p>
         </div>
@@ -245,7 +294,161 @@
     </div>
 </section>
 
+
+
+
+
+
+
+
+
+<section id="sobre-mi" class="container" style="display: none;">
+    <div class="wrapper">
+        <div class="column left-column">
+            <div class="image-slider">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/578028_273686519391185_1272166956_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Q8j-rbIZDvUAX_u_Kl3&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAARL6AXuZBNy0H42RBlMzsmWaLAqewLtXsBR5cNuwzDw&oe=662AC656" alt="Foto 1" style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.6435-9/30412056_1728230373927323_6789717561190645760_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=e-28Ny6Jx-8AX8wqYmG&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAyNnCk1sTlBPBAym_TfLy2BLiAG2O1z-mNRN78hN4Oxw&oe=662AD71C" alt="Foto 2" style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/1503356_1530680963841898_5527510646936038536_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=su9SocMC864AX-tnQfl&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAhjpPA9o6X-rAWxvrX1muK-rPLx_rLaz4_EQHPSJGC1Q&oe=662AB06C" alt="Foto 3" style="margin-left: auto; margin-right: auto; display: block;">
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </div>
+        <div class="column right-column">
+            <h2 style="font-size: 36px; text-align: center;">Juventud y Fe</h2>
+            <p>Soy Zaroni Robles, un matemático colombiano de 26 años cuya vida está profundamente arraigada en la fe católica. Desde mi adolescencia, mi participación en la Legión de María ha moldeado mi liderazgo y sentido de compromiso social.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="sobre-mi" class="container" style="display: none;">
+    <div class="wrapper">
+        <div class="column right-column">
+            <h2 style="font-size: 36px; text-align: center;">Formación Académica y Logros</h2>
+            <p>Graduado con distinción en matemáticas puras, he establecido una empresa de refuerzo académico, donde comparto mi pasión por la disciplina con estudiantes de diversas áreas. Mi desempeño sobresaliente en pruebas nacionales y la publicación de investigaciones colaborativas son testimonio de mi dedicación y excelencia académica.</p>
+        </div>
+        <div class="column left-column">
+            <div class="image-slider">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/578028_273686519391185_1272166956_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Q8j-rbIZDvUAX_u_Kl3&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAARL6AXuZBNy0H42RBlMzsmWaLAqewLtXsBR5cNuwzDw&oe=662AC656" alt="Foto 1" style="margin-left: auto; margin-right: auto; display: block;">
+
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.6435-9/30412056_1728230373927323_6789717561190645760_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=e-28Ny6Jx-8AX8wqYmG&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAyNnCk1sTlBPBAym_TfLy2BLiAG2O1z-mNRN78hN4Oxw&oe=662AD71C" alt="Foto 2" style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/1503356_1530680963841898_5527510646936038536_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=su9SocMC864AX-tnQfl&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAhjpPA9o6X-rAWxvrX1muK-rPLx_rLaz4_EQHPSJGC1Q&oe=662AB06C" alt="Foto 3" style="margin-left: auto; margin-right: auto; display: block;">
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section id="sobre-mi" class="container" style="display: none;">
+    <div class="wrapper">
+        <div class="column left-column">
+            <div class="image-slider">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/578028_273686519391185_1272166956_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Q8j-rbIZDvUAX_u_Kl3&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAARL6AXuZBNy0H42RBlMzsmWaLAqewLtXsBR5cNuwzDw&oe=662AC656" alt="Foto 1" style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.6435-9/30412056_1728230373927323_6789717561190645760_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=e-28Ny6Jx-8AX8wqYmG&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAyNnCk1sTlBPBAym_TfLy2BLiAG2O1z-mNRN78hN4Oxw&oe=662AD71C" alt="Foto 2" style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/1503356_1530680963841898_5527510646936038536_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=su9SocMC864AX-tnQfl&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAhjpPA9o6X-rAWxvrX1muK-rPLx_rLaz4_EQHPSJGC1Q&oe=662AB06C" alt="Foto 3" style="margin-left: auto; margin-right: auto; display: block;">
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </div>
+        <div class="column right-column">
+            <h2 style="font-size: 36px; text-align: center;">Perspectivas Futuras</h2>
+            <p>Actualmente, me encuentro inmerso en una maestría en matemáticas, persiguiendo activamente un mayor conocimiento y logros en mi campo.
+</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="sobre-mi" class="container" style="display: none;">
+    <div class="wrapper">
+        <div class="column right-column">
+            <h2 style="font-size: 36px; text-align: center;">Intereses Personales</h2>
+            <p>Fuera del ámbito académico, encuentro placer en la cocina y la música, estas actividades me brindan momentos de inspiración y conexión con mis pasiones y mi familia.
+
+</p>
+        </div>
+        <div class="column right-column">
+            <div class="image-slider">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/578028_273686519391185_1272166956_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Q8j-rbIZDvUAX_u_Kl3&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAARL6AXuZBNy0H42RBlMzsmWaLAqewLtXsBR5cNuwzDw&oe=662AC656" alt="Foto 1" style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.6435-9/30412056_1728230373927323_6789717561190645760_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=e-28Ny6Jx-8AX8wqYmG&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAyNnCk1sTlBPBAym_TfLy2BLiAG2O1z-mNRN78hN4Oxw&oe=662AD71C" alt="Foto 2" style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="https://scontent.fbga3-1.fna.fbcdn.net/v/t1.18169-9/1503356_1530680963841898_5527510646936038536_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=su9SocMC864AX-tnQfl&_nc_ht=scontent.fbga3-1.fna&oh=00_AfAhjpPA9o6X-rAWxvrX1muK-rPLx_rLaz4_EQHPSJGC1Q&oe=662AB06C" alt="Foto 3" style="margin-left: auto; margin-right: auto; display: block;">
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </main>
+
+<script>
+    // Función para mostrar la sección correspondiente al hacer clic en los enlaces del menú
+   document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.querySelectorAll('section').forEach(section => {
+            if (section.id === targetId) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazar la ventana hacia arriba
+    });
+});
+
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    // Función para crear un slider independiente para cada contenedor
+    function createSlider(container) {
+        var images = container.querySelectorAll('img');
+        var index = 0;
+
+        // Ocultar todas las imágenes excepto la primera al principio
+        for (var i = 1; i < images.length; i++) {
+            images[i].style.display = 'none';
+        }
+
+        setInterval(function() {
+            images[index].style.display = 'none';
+            index = (index + 1) % images.length;
+            images[index].style.display = 'block';
+        }, 3000); // Cambia la imagen cada 3 segundos
+    }
+
+    // Obtener todos los contenedores de sliders y crear sliders independientes para cada uno
+    var sliders = document.querySelectorAll('.image-slider');
+    sliders.forEach(function(slider) {
+        createSlider(slider);
+    });
+});
+
+
+
+
+</script>
 
 <footer>
     <div class="social-media">
