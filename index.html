@@ -219,6 +219,10 @@ h2 {
     margin-top: 0; /* Eliminar el margen superior predeterminado */
     margin-bottom: 10px; /* Añadir un espacio entre el título y el resto del texto */
 }
+h2 a {
+    text-decoration: none; /* Elimina el subrayado */
+}
+
 
 
     
@@ -303,6 +307,7 @@ h2 {
 
 
 <section id="sobre-mi" class="container" style="display: none;">
+
     <div class="wrapper">
         <div class="column left-column">
             <div class="image-slider">
@@ -395,6 +400,39 @@ h2 {
 
 
 
+<section id="matematicas" class="container text-align: center">
+    <div class="text-container">
+        <p>¡A la orden, mi pana! Bienvenidos al Palenque de Zaroni, la jaula onde suelto mis cuentas y mis líos matemáticos. Aquí vamos a darle a tres puntos claves: "Matemáticas Puras", "Matemáticas Aplicadas" y "Docencia y Divulgación".</p>
+        <h2><a href="#matematicas-puras">Matemáticas Puras</a></h2>
+        <p>Desde mi adolescencia, he estado fascinado por los teoremas y demostraciones matemáticas. Explorando las matemáticas puras, encuentro la belleza en la lógica y la precisión. En mi Palenque de Zaroni, compartiré lo más fascinante de este mundo: desde filosofía hasta problemas profundos. Prepárate para adentrarte en un universo donde la mente explora, los teoremas son tesoros y las demostraciones, la clave del conocimiento.</p>
+        <h2><a href="#matematicas-aplicadas">Matemáticas Aplicadas</a></h2>
+        <p>Gracias a mi emprendimiento, Mathestro, he asumido el desafío de enseñar matemáticas a otros. Mis estudiantes constantemente cuestionan la utilidad de lo que enseño, lo que me ha motivado a explorar cómo las matemáticas se aplican en situaciones reales y prácticas. Esta experiencia me ha llevado más allá de las matemáticas puras, hacia el vasto mundo de las matemáticas aplicadas.</p>
+        <h2><a href="#docencia-divulgacion">Docencia y Divulgación</a></h2>
+        <p>Mi experiencia como educador en Mathestro no se limita únicamente a impartir clases, sino que también implica inspirar y abrir nuevas perspectivas en el mundo de las matemáticas. A través de la docencia y la divulgación, me he interesado profundamente por la pedagogía y la didáctica de las matemáticas. Cada vez que observo cómo mis estudiantes comienzan a apreciar las matemáticas, siento una renovada fuente de inspiración que fortalece mi compromiso de compartir la belleza y la importancia de esta disciplina con el mundo.</p>
+    </div>
+</section>
+
+<!-- Agregamos un identificador a la sección de Matemáticas Puras -->
+<section id="matematicas-puras" class="container text-align: center">
+    <div class="text-container">
+    <h2><a>Matemáticas Puras</a></h2>
+        <p>Desde mi adolescencia, he estado fascinado por los teoremas y demostraciones matemáticas. Explorando las matemáticas puras, encuentro la belleza en la lógica y la precisión. En mi Palenque de Zaroni, compartiré lo más fascinante de este mundo: desde filosofía hasta problemas profundos. Prepárate para adentrarte en un universo donde la mente explora, los teoremas son tesoros y las demostraciones, la clave del conocimiento.</p>
+    </div>
+</section>
+
+<section id="matematicas-aplicadas" class="container text-align: center">
+    <h2><a>Matemáticas Aplicadas</a></h2>
+    <div class="text-container">
+        <p>Gracias a mi emprendimiento, Mathestro, he asumido el desafío de enseñar matemáticas a otros. Mis estudiantes constantemente cuestionan la utilidad de lo que enseño, lo que me ha motivado a explorar cómo las matemáticas se aplican en situaciones reales y prácticas. Esta experiencia me ha llevado más allá de las matemáticas puras, hacia el vasto mundo de las matemáticas aplicadas.</p>
+    </div>
+</section>
+
+<section id="docencia-divulgacion" class="container text-align: center">
+    <div class="text-container">
+    <h2><a>Docencia y Divulgación</a></h2>
+        <p>Mi experiencia como educador en Mathestro no se limita únicamente a impartir clases, sino que también implica inspirar y abrir nuevas perspectivas en el mundo de las matemáticas. A través de la docencia y la divulgación, me he interesado profundamente por la pedagogía y la didáctica de las matemáticas. Cada vez que observo cómo mis estudiantes comienzan a apreciar las matemáticas, siento una renovada fuente de inspiración que fortalece mi compromiso de compartir la belleza y la importancia de esta disciplina con el mundo.</p>
+    </div>
+</section>
 
 
 
@@ -407,25 +445,41 @@ h2 {
 </main>
 
 <script>
-    // Función para mostrar la sección correspondiente al hacer clic en los enlaces del menú
-   document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        document.querySelectorAll('section').forEach(section => {
-            if (section.id === targetId) {
-                section.style.display = 'block';
-            } else {
-                section.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', function() {
+    // Función para desplazar la ventana hacia la sección correspondiente al hacer clic en los enlaces del menú
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            document.querySelectorAll('section').forEach(section => {
+                if (section.id === targetId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazar la ventana hacia arriba
+        });
+    });
+
+    // Función para desplazar la ventana hacia la sección correspondiente al hacer clic en los títulos de las secciones
+    document.querySelectorAll('h2 a').forEach(titleLink => {
+        titleLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = 'block'; // Mostrar la sección correspondiente al título clicado
+                document.querySelectorAll('section').forEach(section => {
+                    if (section.id !== targetId) {
+                        section.style.display = 'none'; // Ocultar las otras secciones
+                    }
+                });
+                targetSection.scrollIntoView({ behavior: 'smooth' }); // Desplazar la ventana hacia la sección
             }
         });
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazar la ventana hacia arriba
     });
-});
 
-
-    
-    document.addEventListener('DOMContentLoaded', function() {
     // Función para crear un slider independiente para cada contenedor
     function createSlider(container) {
         var images = container.querySelectorAll('img');
@@ -449,7 +503,6 @@ h2 {
         createSlider(slider);
     });
 });
-
 
 
 
