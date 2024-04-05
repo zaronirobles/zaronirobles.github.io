@@ -233,7 +233,7 @@ h2 a {
 
 <header>
     <div class="brand-logo">
-        <a href="https://zaronirobles.github.io"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/Firma%20marca%20blanca.png" alt="Marca Firma"></a>
+        <a href="#inicio"><img src="https://raw.githubusercontent.com/zaronirobles/zaronirobles.github.io/main/Firma%20marca%20blanca.png" alt="Marca Firma"></a>
     </div>
     <nav>
         <ul>
@@ -252,6 +252,7 @@ h2 a {
         </ul>
     </nav>
 </header>
+
 
 
 
@@ -445,6 +446,7 @@ h2 a {
 </main>
 
 <script>
+    
     document.addEventListener('DOMContentLoaded', function() {
     // Función para desplazar la ventana hacia la sección correspondiente al hacer clic en los enlaces del menú
     document.querySelectorAll('nav ul li a').forEach(link => {
@@ -504,7 +506,17 @@ h2 a {
     });
 });
 
-
+	 // JavaScript para mostrar la sección de inicio por defecto al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mostrar la sección de inicio y ocultar las demás
+        document.querySelectorAll('section').forEach(section => {
+            if (section.id === 'inicio') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    });
 
 </script>
 
